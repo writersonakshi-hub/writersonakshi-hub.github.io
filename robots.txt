@@ -1,0 +1,6 @@
+# robots.txt for SONAKSHI – HINDI POET & AUTHOR Official Website
+# Replace https://sonakshi-author.github.io with your final published domain once hosted.
+User-agent: *
+Allow: /
+
+Sitemap: https://sonakshi-author.github.io/sitemap.xml
