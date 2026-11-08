@@ -1,0 +1,159 @@
+/* ==========================================================================
+   SONAKSHI – HINDI POET & AUTHOR | Official Literary Portfolio Stylesheet
+   Theme: Deep Navy Blue (#0B132B), Midnight Blue (#1C2541), Rich Black (#080C18),
+          Warm Golden Accents (#D4AF37 / #C5A059), Soft Cream Text (#F8F5E6)
+   ========================================================================== */
+
+:root {
+  --navy-950: #080C18;
+  --navy-900: #0B132B;
+  --navy-800: #1C2541;
+  --navy-700: #273459;
+  --gold-300: #E6C86E;
+  --gold-400: #D4AF37;
+  --gold-500: #C5A059;
+  --cream-100: #F8F5E6;
+  --cream-200: #F4F1EA;
+  --cream-300: #D9D4C5;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--navy-900);
+  color: var(--cream-100);
+  font-family: 'Lora', 'Noto Serif Devanagari', Georgia, serif;
+  overflow-x: hidden;
+  margin: 0;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Accessibility Skip Link */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 0.5rem;
+  z-index: 100;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--gold-400);
+  color: var(--navy-950);
+  font-weight: 700;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+.skip-to-content:focus {
+  left: 0.75rem;
+}
+
+/* Focus Visible Ring for Keyboard Navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold-400);
+  outline-offset: 2px;
+}
+
+/* Golden Literary Gradient Heading Text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F8F5E6 0%, #D4AF37 50%, #C5A059 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card Border & Ambient Candle Glow */
+.gold-border-glow {
+  border: 1px solid rgba(212, 175, 55, 0.32);
+  box-shadow: 0 10px 30px -10px rgba(8, 12, 24, 0.85), 0 0 20px -5px rgba(212, 175, 55, 0.12);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.gold-border-glow:hover {
+  border-color: rgba(212, 175, 55, 0.68);
+  box-shadow: 0 14px 35px -10px rgba(8, 12, 24, 0.95), 0 0 25px -3px rgba(212, 175, 55, 0.24);
+}
+
+/* Subtle Starry Night Sky Background */
+.star-bg {
+  background-image:
+    radial-gradient(1.5px 1.5px at 20px 30px, #F8F5E6, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 90px 40px, #D4AF37, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 160px 120px, rgba(248,245,230,0.8), rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 250px 80px, #D4AF37, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 330px 190px, rgba(212,175,55,0.6), rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 380px 240px;
+}
+
+/* Active Navigation Indicator */
+.nav-link-active {
+  color: var(--gold-400) !important;
+  border-bottom: 2px solid var(--gold-400);
+}
+
+/* Literary Ornament Divider */
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem auto;
+  max-width: 280px;
+}
+.ornament-divider::before,
+.ornament-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.65), transparent);
+}
+
+/* Page View Transition */
+.page-view {
+  animation: fadeInPage 0.32s ease-out;
+}
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Verification & Local-Only Badges */
+.verification-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-family: 'Inter', sans-serif;
+  background-color: rgba(212, 175, 55, 0.14);
+  border: 1px dashed rgba(212, 175, 55, 0.6);
+  color: var(--gold-300);
+}
+
+/* Responsive Typography & Print Cleanups */
+@media (max-width: 640px) {
+  .ornament-divider {
+    max-width: 200px;
+    margin: 1rem auto;
+  }
+}
+
+@media print {
+  header, footer, #top-utility-bar, #modal-author-studio, #modal-seo-inspector, #app-toast {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
